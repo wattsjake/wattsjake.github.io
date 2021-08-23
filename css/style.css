@@ -1,0 +1,62 @@
+.clearfix {
+  overflow: auto;
+}
+
+html, body {
+  width: auto;
+  height: 100%;
+}
+
+.header {
+	background: #2196F3;
+	text-align: right;
+	font-size: 30px;
+	padding: 15px;
+	color: white;
+}
+
+.sidebar {
+	float: left;
+	width: 150px;
+	height: 100%;
+	background: #ffcdd2;
+	overflow: auto;
+}
+
+.handle {
+	float: left;
+	width: 10px;
+	height: 100%;
+	background: #ddd;
+	cursor: ew-resize;
+}
+
+.content {
+	margin-left: left;
+	height: 100%;
+	padding-left: 30px; 
+	overflow: auto;
+}
+
+.btn-group button{
+	background-color: #04AA6D; /* Green background */
+	border: 0px solid white;
+	margin: 5px 0px;
+	color: white; /* White text */
+	padding: 10px 10px; /* Some padding */
+	cursor: pointer; /* Pointer/hand icon */
+	width: 100%; /* Set a width if needed */
+	display: block; /* Make the buttons appear below each other */
+	border-radius: 8px;
+}
+
+.btn-group button:not(:last-child) {
+  border-bottom: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #3e8e41;
+}
+
+
