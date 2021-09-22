@@ -15,7 +15,7 @@ html, body {
 	
 }
 .header {
-    background: #2196F3; /* #2196F3 */
+    background-color: #2196F3; /* #2196F3 */
     text-align: right;
     font-size: 20px;
     padding: 13px;
@@ -24,7 +24,7 @@ html, body {
 .sidebar {
 	display: inline-flex;
     height: auto;
-    background: #ffcdd2; /* #ffcdd2 */
+    background-color: grey; /* #ffcdd2 */
     overflow: none;
 	grid-column: 1;
 	flex-direction: column;
@@ -32,17 +32,17 @@ html, body {
 	grid-row: 1;
 }
 .content {
-	background: #508991;
+	background-color: antiquewhite; /* #508991 */
     height: auto;
 	grid-column: 2 / end;
 	grid-row: 1/end;
-	padding: 30px
+	padding: 50px 75px 50px 75px
 }
 
 .flex-container {
  	display: flex;
 	flex-direction: row;
-	background-color: #508991;
+	background-color: antiquewhite;
 }
 
 .flex-container > div {
@@ -78,6 +78,10 @@ html, body {
 	border-radius: 8px;
 }
 
+.indent{
+	margin-left: 2.5em;
+}
+
 img{
 	border-radius: 8px;
 }
@@ -101,7 +105,8 @@ h2 {
 h3 {
     font-family: Arial;
     font-size: 1.25em;
-    margin: 2px;
+    margin: 0px;
+	display: inline-block;
 }
 h4 {
     font-family: Arial;
@@ -113,6 +118,25 @@ h5 {
 }
 h6 {
     font-size: 0.7em;
+}
+p{
+	margin: 15px 0px 0px 0px;
+}
+/* LINKS */
+a:link {
+    text-decoration: none;
+	color:yellow;
+}
+a:visited {
+    text-decoration: none;
+	color:yellow;
+}
+a:hover {
+    text-decoration: none;
+	color:#16B8C8;
+}
+a:active {
+    text-decoration: none;
 }
 /* BUTTONS */
 .btn-group button {
@@ -133,15 +157,7 @@ h6 {
 .btn-group button:hover {
     background-color: #16B8C8;
 }
-/* LINKS */
-a:link {
-    text-decoration: none;
+
+table, th, td {
+  border: 1px solid black;
 }
-a:visited {
-    text-decoration: none;
-}
-a:hover {
-    text-decoration: none;
-}
-a:active {
-    text-decoration: none;
