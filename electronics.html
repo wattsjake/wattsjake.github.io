@@ -16,8 +16,7 @@
 			<div class="sidebar btn-group" align="center">
 				<a href="index.html"> <button> Home</button></a>
 				<a href="about.html"> <button> About Me</button></a>
-				<a href="electronics.html"> <button>Electronics</button></a>
-				<a href="labview.html"> <button>LabView</button></a>
+				<a href="electronics.html"> <button style="background-color: #F7CB15">Electronics</button></a>
 				<a href="mathematics.html"> <button>Mathematics</button></a>
 				<a href="projects.html"> <button>Projects</button></a>
 				<a href="amature_radio.html"> <button>Amature Radio</button></a>
@@ -30,19 +29,61 @@
 			<!--- TOP BUTTONS -->
 			
 			<h2><center>Electrical Engineering</center></h2>
-			<hr>
-				<div class="flex-container">
-					<div><a href="pdf/Electrical_Circuits_Equations.pdf" target="_blank"><button>Equation Sheet</button></a></div>
-					<div><a href="pdf/Microelectronics_Equations_rev2.pdf" target="_blank"><button>Microelectronics Equation Sheet</button></a></div>
-					<div><button>Arduino</button></div>
-					<div><button>VHDL</button></div>  
-				</div>
-			
-			<hr>
+			<hr>			
 			
 			<!-- INFORMATION -->
+			<div class="info">
+				<div class="flex-links">
+					<h4>Equations:</h4> &nbsp;
+					<a href="pdf/Electrical_Circuits_Equations.pdf" target="_blank"> <button>Equations</button> </a> &nbsp;
+					<a href="pdf/Microelectronics_Equations_rev2.pdf" target="_blank"> <button>Microelectronics</button> </a>
+				</div>
+				<hr> 
+				
+				<!-- Circuit Analysis -->
+				<h2>Circuit Analysis</h2>
+				<br>
+				<center><h3><u>Current Divider</u></h3></center>
+				<br>
+				<center><img src="images/Currentdivider_rev.3.svg"></center>
+				
+				<h3>Current Divider Calculator</h3>
+				
+				<form name="currentdiv">
+					
+					Number 1: <input type="text" id="num1">
+					<br>
+					Number 2: <input type="text" id="num2">
+					<br>
+					Result: <input type="text" id="result">
+					<br>
+					<input type="button" value="Calculate" onClick="myfuction()">
+					
+					</form>
+				
+				<p id="demo"></p>
+					
+					<script type="text/javascript">
+						function myFunction(){
+							document.getElementById("demo").innerHTML = "Hello World";
+						}
+						
+					</script>
+				
+				
+					
+
+
+				
+				
+				
+				
+				
+			</div>
+
 			
-			<h2></h2>
+			
+			
 			
 		</div>
 		</div>

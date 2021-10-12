@@ -15,7 +15,7 @@ html, body {
 	
 }
 .header {
-    background-color: #2196F3; /* #2196F3 */
+    background-color:  #329DBD; /* #2196F3 */
     text-align: right;
     font-size: 20px;
     padding: 13px;
@@ -24,7 +24,7 @@ html, body {
 .sidebar {
 	display: inline-flex;
     height: auto;
-    background-color: grey; /* #ffcdd2 */
+    background-color: #878E88; /* #ffcdd2 */
     overflow: none;
 	grid-column: 1;
 	flex-direction: column;
@@ -32,17 +32,36 @@ html, body {
 	grid-row: 1;
 }
 .content {
-	background-color: antiquewhite; /* #508991 */
+	background-color: gainsboro; /* #508991 */
     height: auto;
 	grid-column: 2 / end;
 	grid-row: 1/end;
 	padding: 50px 75px 50px 75px
 }
 
+.flex-links{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.flex-links button{
+	background-color: #F55D3E;/* Green background */
+	display: inline-block;
+    border: 0px solid white;
+    margin: 5px 0px 0px 0px;
+    color: white; /* White text */
+    padding: 12px 10px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    border-radius: 8px;
+}
+.flex-links button:hover{
+	background-color:  #329DBD;
+}
+
 .flex-container {
  	display: flex;
 	flex-direction: row;
-	background-color: antiquewhite;
+	background-color: gainsboro;
 }
 
 .flex-container > div {
@@ -53,7 +72,7 @@ html, body {
 }
 
 .flex-container button{
-    background-color: #04AA6D; /* Green background */
+    background-color:#F55D3E; /* Green background */
     border: 0px solid white;
     margin: 5px 0px 0px 0px;
     color: white; /* White text */
@@ -66,7 +85,7 @@ html, body {
 
 /* Add a background color on hover */
 .flex-container button:hover {
-    background-color: #16B8C8;
+    background-color:  #329DBD;
 }
 
 .flex-container img {
@@ -80,6 +99,16 @@ html, body {
 
 .indent{
 	margin-left: 2.5em;
+}
+
+.info{
+	margin: 5px 200px 5px 200px;
+}
+.footer{
+	margin: 700px 50px 50px 50px;
+	position: relative;
+	text-align: center;
+	bottom: 0px;
 }
 
 img{
@@ -125,22 +154,22 @@ p{
 /* LINKS */
 a:link {
     text-decoration: none;
-	color:yellow;
+	color: #F55D3E;
 }
 a:visited {
     text-decoration: none;
-	color:yellow;
+	color: #F55D3E;
 }
 a:hover {
     text-decoration: none;
-	color:#16B8C8;
+	color:#09A2FF;
 }
 a:active {
     text-decoration: none;
 }
 /* BUTTONS */
 .btn-group button {
-    background-color: #04AA6D; /* Green background */
+    background-color: #F55D3E;/* Green background */
     border: 0px solid white;
     margin: 5px 0px 0px 0px;
     color: white; /* White text */
@@ -155,7 +184,7 @@ a:active {
 }
 /* Add a background color on hover */
 .btn-group button:hover {
-    background-color: #16B8C8;
+    background-color: #329DBD;
 }
 
 table, th, td {
