@@ -4,32 +4,79 @@
 	<meta charset="utf-8">
 		<link	rel="stylesheet" href="css/style.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 		<title>Jacob Watts | Electrical Engineering</title>
 	</head>
 
 	<body>
-		<!-- HEADER -->
-		<div class="header">
-			<a href="index.html" style="color: white"> <h4>Jacob Watts | Electrical Engineering</h4></a>
-		</div>
-		<div class="grid-wrapper">
-			<div class="sidebar btn-group" align="center">
-				<a href="index.html"> <button> Home</button></a>
-				<a href="about.html"> <button> About Me</button></a>
-				<a href="electronics.html"> <button>Electronics</button></a>
-				<a href="mathematics.html"> <button>Mathematics</button></a>
-				<a href="projects.html"> <button style="background-color:#F7CB15">Projects</button></a>
-				<a href="amature_radio.html"> <button>Amature Radio</button></a>
-		</div>
-
+		<nav>
+			<div class="header">
+				<a href="about.html">Jacob Watts</a>
+			</div>
+			<ul class="nav-links">
+				<li>
+					<a href="index.html">Home</a>
+				</li>
+				<li>
+					<a href="about.html">About</a>
+				</li>
+				<li>
+					<a href="projects.html">
+						<div class="dropdown">
+							Projects
+							<div class="dropdown-content">
+								<a>BA1404 FM Transmitter</a>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="projects.html">
+						<div class="dropdown">
+							Resources
+							<div class="dropdown-content">
+								<a>Amateur Radio</a>
+								<a href="circuit_analysis.html">Circuit Analysis</a>
+							</div>
+						</div>
+					</a>
+				</li>
+			</ul>
+			<div class="burger" onClick="mobile_menu()">
+				<div></div>
+				<div></div>
+				<div></div>			
+			</div>
+			
+		</nav>
+		
+		<mobile-menu id="mobile-links">
+			<div>
+				<a href="index.html">Home</a>
+				<a href="about.html">About</a>
+				<a href="projects.html">Projects</a>
+				<a href="resources.html">Resources</a>
+			</div>
+			
+		</mobile-menu>
+		
+		<script src="java/main.js"></script>
+		
 		<!-- CONTENT -->
-
-		<div class="content">
-			<h2><center>Projects</center></h2>
-			<hr>
-
-			<p>Projects</p>
-		</div>
-		</div>
+		
+		<main>
+			<h1> Projects </h1>
+			<div class="horz_line"></div>
+			
+			<h2><u>FM Transmitter BA1404</u></h2>
+			
+			<p>Dive into the world of RF(radio frequency) with the BA1404 HI-FI Stereo transmitter. You will be able to transmit MP3 music from your iPod, computer, discman, walkman, TV/SAT receiver, and many other audio sources! The goal of this project was to create a professional PCB and use surface mount components to help increase the range and quality of the RF signal. Visit the following website for more information on the subject. </p>
+			
+		</main>
+		
+		
+		
+		
+		
 	</body>
 </html>
