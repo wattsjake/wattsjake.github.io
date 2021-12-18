@@ -60,11 +60,24 @@
 			
 		</mobile-menu>
 		
-		<script src="java/main.js"></script>
+		<script src="../java/main.js"></script>
 		
 		<main>
 			<h1> Temperature Converstion </h1>
 			<div class="horz_line"></div>
+			
+			<!-- Calculator -->
+			<div class="calculator">
+				<p>
+				<label>Fahrenheit</label>
+				<input id="inputFahrenheit" type="number" placeholder="Fahrenheit"
+				oninput="temperatureConverter(this.value)"
+				onchange="temperatureConverter(this.value)">
+				</p>
+				<p>Celsius: <span id="outputCelsius"></span></p>
+			</div>
+			
+
 			
 		
 			
