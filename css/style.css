@@ -164,6 +164,10 @@ main a{
 	height: 420px;
 	margin-right: 25px;
 }
+.list{
+	font-family: 'Open Sans', sans-serif;
+	line-height: 24px;
+}
 
 .footer{
 	text-align: center;
