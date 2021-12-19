@@ -164,9 +164,29 @@ main a{
 	height: 420px;
 	margin-right: 25px;
 }
+/* .list is for the calculator list */
 .list{
 	font-family: 'Open Sans', sans-serif;
 	line-height: 24px;
+}
+.calculator{
+	display: flex;
+	flex-direction: row;
+}
+
+.flex-left {
+	width: 25%;
+	height: 100vh;
+	margin: 5px;
+	padding: 5px;
+	border: 2px solid red;
+}
+
+.flex-right {
+	width: 25%;
+	margin: 5px;
+	padding: 5px;
+	border: 2px solid green;
 }
 
 .footer{

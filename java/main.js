@@ -1,4 +1,4 @@
-
+/*Mobile menu window*/
 function mobile_menu() {
   var x = document.getElementById("mobile-links");
   if (x.style.display === "block") {

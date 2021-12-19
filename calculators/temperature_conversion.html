@@ -68,13 +68,28 @@
 			
 			<!-- Calculator -->
 			<div class="calculator">
-				<p>
-				<label>Fahrenheit</label>
-				<input id="inputFahrenheit" type="number" placeholder="Fahrenheit"
-				oninput="temperatureConverter(this.value)"
-				onchange="temperatureConverter(this.value)">
-				</p>
-				<p>Celsius: <span id="outputCelsius"></span></p>
+				<div class="flex-left">
+					<input id="inputType" type="radio" placeholder="Fahrenheit">
+					<label>Fahrenheit</label>
+					<br>
+					<input id="inputType" type="radio" placeholder="Celsius">
+					<label>Celsius</label>
+					<br>
+					<input id="inputType" type="radio" placeholder="Kelvin">
+					<label>Kelvin</label>
+					<br>
+					<input id="inputFahrenheit" type="number" placeholder="Value"
+					oninput="temperatureConverter(this.value)"
+					onchange="temperatureConverter(this.value)">
+					<label>Value</label>
+				</div>
+				<div class="flex-right">
+					Fahrenheit: <span id="outputCelsius"></span>
+					<br>
+					Celsius: <span id="outputCelsius"></span>
+					<br>
+					Kelvin: <span id="outputCelsius"></span>
+				</div>			
 			</div>
 			
 
