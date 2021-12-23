@@ -8,8 +8,13 @@ function mobile_menu() {
   }
 }
 
-/* When the input field receives input, convert the value from fahrenheit to celsius */
-function temperatureConverter(valNum) {
-  valNum = parseFloat(valNum);
-  document.getElementById("outputCelsius").innerHTML = (valNum-32) / 1.8;
+/* Temperature radio buttons */
+function temperatureConverter(temp){
+	tempValue = document.getElementById("inputTemp").value;
+	console.log(tempValue);
+	document.getElementById("outputFahrenheit").value = tempValue;
+	document.getElementById("outputCelsius").value = tempValue;
+	document.getElementById("outputKelvin").value = tempValue;
+	
+	
 }
