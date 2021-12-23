@@ -63,32 +63,32 @@
 		<script src="../java/main.js"></script>
 		
 		<main>
-			<h1> Temperature Converstion </h1>
+			<h1> Temperature Conversion </h1>
 			<div class="horz_line"></div>
 			
 			<!-- Calculator -->
 			<div class="calculator">
 				<div class="flex-left">
-					<input name="tempunit" type="radio" value="on">
+					<input name="tempunit" type="radio" value="Fahrenheit">
 					<label>Fahrenheit</label>
 					<br>
-					<input name="tempunit" type="radio" value="on">
+					<input name="tempunit" type="radio" value="Celsius">
 					<label>Celsius</label>
 					<br>
-					<input name="tempunit" type="radio" value="on">
+					<input name="tempunit" type="radio" value="Kelvin">
 					<label>Kelvin</label>
 					<br>
 					<input id="inputTemp" type="number" placeholder="Enter Temperature" size="10px" oninput="temperatureConverter(this.value)"
   					onchange="temperatureConverter(this.value)">
 				</div>
 				<div class="flex-right">
-					<input name="outputFahrenheit" id="outputFahrenheit" type="text" size="8px">
+					<input name="outputFahrenheit" id="outputFahrenheit" type="text" size="7px">
 					<label>Fahrenheit</label>
 					<br>
-					<input name="Celsius" id="outputCelsius" type="text" size="8px">
+					<input name="outputCelsius" id="outputCelsius" type="text" size="7px">
 					<label>Celsius</label>
 					<br>
-					<input name="Kelvin" id="outputKelvin" type="text" size="8px">
+					<input name="outputKelvin" id="outputKelvin" type="text" size="7px">
 					<label>Kelvin</label>
 				</div>			
 			</div>
