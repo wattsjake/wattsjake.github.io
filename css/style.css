@@ -168,6 +168,7 @@ main{
 	background-color: black;
 	margin: 0px;
 }
+/*Used for the navigation bar at the top of each page */
 .page_nav{
 	font-size: 15px;
 	font-style: italic;
@@ -177,6 +178,24 @@ main{
 	.page_nav a{
 		text-decoration: none;
 	}
+
+
+/*Used for the contact_comment box*/
+.request_information{
+	display:flex;
+	flex-direction: column;
+	text-align:center;
+	width: 50%;
+	margin-left: 250px;
+}
+.request_information label{
+	color: black;
+	background-color: white;
+}
+
+
+
+
 .imag_left{
 	float:left;
 	margin: 0px 20px 0px 0px;
@@ -223,7 +242,7 @@ label{
 footer{
 	width: 100%;
 	text-align: center;
-	position: fixed;
+	position: relative;
 	bottom: 0;
 }
 
