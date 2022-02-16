@@ -5,6 +5,10 @@
 	box-sizing: border-box;
 }
 */
+/* create variables to change*/
+:root {
+  --main-bg-color: #F1F1F3;
+}
 
 *{
 	background-color: white;
@@ -14,22 +18,22 @@ nav{
 	justify-content: space-around;
 	align-items: center;
 	min-height: 6vh;
-	background-color: #F1F1F3;
+	background-color: var(--main-bg-color);
 	font-family: 'Open Sans', sans-serif;
 }
 
 .header{
-	background-color: #F1F1F3;
+	background-color: var(--main-bg-color);
 	text-transform: uppercase;
 	letter-spacing: 5px;
 	font-size: 20px;
 }
 .header a{
-	background-color: #F1F1F3;
+	background-color: var(--main-bg-color);
 	text-decoration: none;
 	color: black;
 	letter-spacing: 5px;
-	font-size: 20px;
+	font-size: 15px;
 	font-weight: lighter;
 }
 .header a:hover{
@@ -39,12 +43,12 @@ nav{
 .nav-links{
 	display: flex;
 	justify-content: space-around;
-	background-color: #F1F1F3;
+	background-color: var(--main-bg-color);
 	width: 40%;
 }
 .nav-links li{
 	list-style: none;
-	background-color: #F1F1F3;
+	background-color: var(--main-bg-color);
 }
 .nav-links a{
 	color: black;
@@ -53,7 +57,7 @@ nav{
 	font-weight: lighter;
 	font-size: 14px;
 	cursor: pointer;
-	background-color: #F1F1F3;
+	background-color: var(--main-bg-color);
 	/*used to increase clickable area of links*/
 	display: inline-block;     
 	position: relative;    
@@ -69,7 +73,7 @@ nav{
 .dropdown{
 	position: relative;
 	display: inline-block;
-	background-color: #F1F1F3;
+	background-color: var(--main-bg-color);
 	
 }
 .dropdown-content{
@@ -95,7 +99,7 @@ nav{
 }
 .burger{
 	display: none;
-	background-color: #F1F1F3;
+	background-color: var(--main-bg-color);
 }
 .burger div{
 	width: 27px;
@@ -160,7 +164,7 @@ main{
 	}
 	main a{
 		color: black;
-		font-size: 17px;
+		font-size: 15px;
 		line-height: 30px;
 		letter-spacing: inherit;
 		text-decoration: underline;
@@ -168,11 +172,25 @@ main{
 	main a:hover{
 		color: blue;
 	}
+	main p{
+		font-size: 15px;
+	}
 .horz_line{
 	width: 100%;
 	height: 2px;
 	background-color: black;
 	margin: 0px;
+}
+/*Three column*/
+.columns {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column {
+  flex: 33.33%;
 }
 /*Used for the navigation bar at the top of each page */
 .page_nav{
@@ -198,7 +216,10 @@ main{
 	color: black;
 	background-color: white;
 }
-
+/*use for createing a columned list*/
+.table_list_3col{
+	
+}
 
 
 
@@ -228,7 +249,7 @@ main{
 	margin: 5px;
 	padding: 5px;
 	border: 2px solid black;
-	background-color: #F1F1F3;
+	background-color: var(--main-bg-color);
 }
 .flex-right {
 	width: 50%;
@@ -266,7 +287,7 @@ footer{
 @media screen and (max-width: 989px){
 	
 	.header a{
-		background-color: #F1F1F3;
+		background-color: var(--main-bg-color);
 		text-decoration: none;
 		color: black;
 		letter-spacing: 7px;
@@ -312,7 +333,7 @@ footer{
 		padding: 0px 50px 0px 0px;
 		letter-spacing: 3px;
 		line-height: 50px;
-		background-color:#F1F1F3;
+		background-color: var(--main-bg-color);
 	}
 	mobile-menu a:hover{
 		color: cornflowerblue;
@@ -375,18 +396,18 @@ footer{
 		margin: 5px;
 		padding: 5px;
 		border: 2px solid black;
-		background-color: #F1F1F3;
+		background-color: var(--main-bg-color);
 	}
 	.flex-right {
 		width: 100%;
 		margin: 5px;
 		padding: 5px;
 		border: 2px solid black;
-		background-color: #F1F1F3;
+		background-color: var(--main-bg-color);
 	}
 	label{
 		color: crimson;
-		background-color: #F1F1F3;
+		background-color: var(--main-bg-color);
 		font-family: 'Open Sans', sans-serif;
 		font-size: 17px;
 		line-height: 27px;
