@@ -183,14 +183,14 @@ main{
 }
 /*Three column*/
 .columns {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 100%;
 }
 
 .column {
-  flex: 33.33%;
+	flex: 1 1 0px;
 }
 /*Used for the navigation bar at the top of each page */
 .page_nav{
@@ -222,7 +222,7 @@ main{
 }
 
 
-
+/* responsive images*/
 .imag_left{
 	float:left;
 	margin: 0px 20px 0px 0px;
@@ -232,6 +232,13 @@ main{
 	width: 50%;
 	height: 420px;
 	margin-right: 25px;
+}
+.responsive {
+	width: 100%;
+	max-width: 400px;
+	height: auto;
+	margin: 5px 5px 5px 5px;
+	
 }
 /* .list is for the calculator list */
 .list{

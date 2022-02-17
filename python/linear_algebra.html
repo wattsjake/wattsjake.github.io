@@ -5,6 +5,13 @@
 		<link	rel="stylesheet" href="../css/style.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+		
+		<!-- MATH SCRIPTS -->
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+		<script id="MathJax-script" async
+		src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+		</script>
+		
 		<title>Jacob Watts | Python</title>
 	</head>
 
@@ -77,13 +84,27 @@
 			
 			<div class="horz_line"></div>			
 			
-			<p>python code</p>
+			<p>Linear algebra is used for a wide range of applications. Often when one has a system of equations linear algebra comes in handy. Cramer's rule is a somewhat reasonable way of solving systems of equations. Let's briefly review Cramer's rule and how it can help us solve a systme of linear equations.</p>
+			
+			<p>If you recall, Cramers' rule is given as the following. Consider a system of <i>n</i> unknowns represented in a matrix multiplication form.</p>
+			
+			<p> \[Ax = b\]</p>
+			
+			<p>where the \(n \times n \) matrix A has a nonzero determinant, and the vector <i>x</i> = \([x_1, x_2,...,x_n]^T\) is a column vector of the variables. The system has a unique solution whose indeividual values for the unknowns are given by</p>
+			
+			<p> \[x_i = \frac{det(A_i)}{det(A)} \quad i=1,...,n\]</p>
+			
+			<p>where \(A_i\) is the matrix formed by replacing the \(i^{th}\) column of A with vector \(b\).</p>
+			<p>  When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are
+			\[x = {-b \pm \sqrt{b^2-4ac} \over 2a}.\]</p>
+			
+			<p> \[(a^3)\]</p>
 			
 		</main>
 		
 		<!-- footer -->
 		<footer>
-			<p>Last Update: <!-- #BeginDate format:En2 -->15-Feb-2022<!-- #EndDate --></p>
+			<p>Last Update: <!-- #BeginDate format:En2 -->16-Feb-2022<!-- #EndDate --></p>
 			<p>&copy 2021 Jacob Watts. All Rights Reserved</p>
 		</footer>
 		
