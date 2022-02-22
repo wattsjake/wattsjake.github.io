@@ -276,11 +276,14 @@ footer{
 	width: 100%;
 	text-align: center;
 	position: relative;
-	bottom: 0; 
+	bottom: 0;
+    background-color: var(--main-bg-color);
 }
 footer p{
+    background-color: var(--main-bg-color);
     margin: 3px;
 }
+
 
 /* media scrren with 1227px */
 @media screen and (max-width: 1227px){
