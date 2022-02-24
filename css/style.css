@@ -374,12 +374,20 @@ footer p{
 		letter-spacing: inherit;
 		text-decoration: underline;
 	}
+.city {
+background-color: tomato;
+color: white;
+border: 2px solid black;
+margin: 20px;
+padding: 20px;
+    font-size: 50px;
+}
 	/* Page navigation bar */
 	.page_nav{
-	font-size: 15px;
-	font-style: italic;
-	letter-spacing: 1px;
-	line-height: 35px;
+        font-size: 15px;
+        font-style: italic;
+        letter-spacing: 1px;
+        line-height: 35px;
 	}
 	.page_nav a{
 		text-decoration: none;

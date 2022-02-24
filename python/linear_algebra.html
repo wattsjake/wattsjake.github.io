@@ -132,26 +132,30 @@
             
             <p>Assume $a_1b_2 - b_1a_2$ nonzero. Then with help of determinants, x and y can be found with Cramer's rule as:</p>
             
+            
+                <div class="responsive-equation">
             <p>
-            \[x = 
-                \frac{det\begin{bmatrix}
-                \color{red}c_1 & b_1\\
-                \color{red}c_2 & b_2\\
-                \end{bmatrix}}{det\begin{bmatrix}
-                a_1 & b_1\\
-                a_2 & b_2\\
-                \end{bmatrix}} = \frac{\color{red}c_1\color{black}b_2-b_1\color{red}c_2}{a_1b_2 - b_1a_2},
-                \qquad
-                y = 
-                \frac{det\begin{bmatrix}
-                a_1 & \color{red}c_1\\
-                a_2 & \color{red}c_2\\
-                \end{bmatrix}}{det\begin{bmatrix}
-                a_1 & b_1\\
-                a_2 & b_2\\
-                \end{bmatrix}} = \frac{a_1\color{red}c_2\color{black}-\color{red}c_1\color{black}a_2}{a_1b_2 - b_1a_2}.
-                \]
-            </p>
+                why is this not showing up?
+                \[x = 
+                    \frac{det\begin{bmatrix}
+                    \color{red}c_1 & b_1\\
+                    \color{red}c_2 & b_2\\
+                    \end{bmatrix}}{det\begin{bmatrix}
+                    a_1 & b_1\\
+                    a_2 & b_2\\
+                    \end{bmatrix}} = \frac{\color{red}c_1\color{black}b_2-b_1\color{red}c_2}{a_1b_2 - b_1a_2},
+                    \qquad
+                    y = 
+                    \frac{det\begin{bmatrix}
+                    a_1 & \color{red}c_1\\
+                    a_2 & \color{red}c_2\\
+                    \end{bmatrix}}{det\begin{bmatrix}
+                    a_1 & b_1\\
+                    a_2 & b_2\\
+                    \end{bmatrix}} = \frac{a_1\color{red}c_2\color{black}-\color{red}c_1\color{black}a_2}{a_1b_2 - b_1a_2}.
+                    \]
+                </p></div>
+            
             
             <pre class="prettyprint"><code class="language-python">import numpy as np
 #cramer's rule for 2x2
