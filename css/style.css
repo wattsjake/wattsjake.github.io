@@ -374,14 +374,9 @@ footer p{
 		letter-spacing: inherit;
 		text-decoration: underline;
 	}
-.city {
-background-color: tomato;
-color: white;
-border: 2px solid black;
-margin: 20px;
-padding: 20px;
-    font-size: 50px;
-}
+    .responsive-equation p{
+        font-size: 12.2px;
+    }
 	/* Page navigation bar */
 	.page_nav{
         font-size: 15px;
