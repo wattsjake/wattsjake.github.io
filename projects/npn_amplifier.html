@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">		
 		
-		<title>NPN Transistor Amplifier</title>
+		<title>Common Emitter Amplifier - NPN BJT</title>
 	</head>
 
 	<body>
@@ -74,22 +74,30 @@
 		<script src="../java/main.js"></script>
 		
 		<main>
-			<h1>NPN Transistor Amplifier</h1>
+			<h1>Common Emitter Amplifier - NPN</h1>
 			
 			<div class="horz_line"></div>
 			
-			<p>The common emitter amplifier has many uses as a general purpose amplifier. This emitter typically offers high current gain, medium input resistance and a high output resistance. The output of a common emitter amplifier is 180 degrees out of phase to the input signal.</p>
+			<p>The common emitter amplifier has many uses as a general purpose amplifier. This emitter typically offers high current gain, medium input resistance and a high output resistance. Due to the internal capacitance of the transistor it lacks the ability to operate at high frequencies. The output of a common emitter amplifier is 180 degrees out of phase to the input signal.</p>
 			
-			<p>There are three regions of a bipolar-junction-transistor (BJT).</p>
+			<p>There are four regions of a bipolar-junction-transistor (BJT).</p>
 			
 			<ul>
-				<li><u>Active (Forward-active)</u>: In this region the BJT can act as a fairly linear amplifier. </li>
-				<li><u>Saturation</u>: The base current has increased well beyond the point that the emitter-base junction is forward biased. The transistor is ON.</li>
-				<li><u>Cut-off</u>: This is the case where the transistor is essentially inactive. The transistor is OFF.</li>
+				<li><u>Reverse Active:</u> Like active mode, the current is proportional to the base current, but it flows in reverse. Current flows from emitter to collector (not, exactly, the purpose transistors were designed for).</li>
+				<li><u>Saturation</u>: The transistor acts like a short circuit. Current freely flows from collector to emitter.</li>
+				<li><u>Cut-off</u>: The transistor acts like an open circuit. No current flows from collector to emitter.</li>
+				<li><u>Active (Forward-active)</u>: The current from collector to emitter is proportional to the current flowing into the base.</li>
+				
+				
+				
 				
 			</ul>
 			
-            <img src="../images/npn_biased.svg" alt="pano" width="100%" height="300px" vspace="10">
+			<img src="../images/quadrant_graph_bjt_operation_color.svg" alt="pano" width="100%" height="300px" vspace="10">
+			
+            
+			
+			
 			
             
             
@@ -100,7 +108,7 @@
 		
 		<!-- footer -->
 		<footer>
-			<p>Last Update: <!-- #BeginDate format:En2 -->13-Mar-2022<!-- #EndDate --></p>
+			<p>Last Update: <!-- #BeginDate format:En2 -->16-Mar-2022<!-- #EndDate --></p>
 			<p>&copy 2021 Jacob Watts. All Rights Reserved</p>
 		</footer>
 		
