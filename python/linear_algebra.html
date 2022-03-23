@@ -102,7 +102,35 @@
 			
 			<p> \[x_i = \frac{det(A_i)}{det(A)} \quad i=1,...,n\]</p>
 			
-			<p>where $A_i$ is the matrix formed by replacing the $i^{th}$ column of A with vector $b$.</p>
+			<p>where $A_i$ is the matrix formed by replacing the $i^{th}$ column of $A$ with vector $b$.</p>
+			
+			<h2>Determinant of a 3x3 matrix</h2>
+			
+			<div class="horz_line"></div>
+			
+			<p>Let's take it one step further, shall we? Let's try a 3x3 matrix. Now, a 3x3 matrix is a little more complicated, but a quick review is all that is needed to understand the process. I'll get more into the details of taking a 3x3 determinante, but the general idea looks somthing like this.</p>
+			
+			<p>Conside the following matrix</p>
+			<div class="responsive-equation">
+			<p> \[ det\begin{bmatrix}
+                a & b & c \\
+                d & e & f \\
+				h & i & j \\
+                \end{bmatrix} = 
+				a \cdot det \begin{bmatrix}
+				e & f \\
+				h & i \\
+				\end{bmatrix} -
+				b \cdot det \begin{bmatrix}
+				d & f \\
+				g & i \\
+				\end{bmatrix} +
+				c \cdot det \begin{bmatrix}
+				d & e \\
+				g & h \\
+				\end{bmatrix}\]
+				</p></div>
+			
             
             <h2>Application</h2>
             <div class="horz_line"></div>
@@ -217,7 +245,7 @@ def cramer_3x3(A3,b3):
 		
 		<!-- footer -->
 		<footer>
-			<p>Last Update: <!-- #BeginDate format:En2 -->24-Feb-2022<!-- #EndDate --></p>
+			<p>Last Update: <!-- #BeginDate format:En2 -->22-Mar-2022<!-- #EndDate --></p>
 			<p>&copy 2021 Jacob Watts. All Rights Reserved</p>
 		</footer>
 		
