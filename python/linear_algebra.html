@@ -104,13 +104,22 @@
 			
 			<p>where $A_i$ is the matrix formed by replacing the $i^{th}$ column of $A$ with vector $b$.</p>
 			
-			<h2>Determinant of a 3x3 matrix</h2>
-			
+			<h2>Review of Determinants</h2>
 			<div class="horz_line"></div>
 			
-			<p>Let's take it one step further, shall we? Let's try a 3x3 matrix. Now, a 3x3 matrix is a little more complicated, but a quick review is all that is needed to understand the process. I'll get more into the details of taking a 3x3 determinante, but the general idea looks somthing like this.</p>
+			<p>Finding the determinant is an important part of Cramer's Rule. Let's take a moment to review how it's done. We'll start off small with a 2x2 matrix.</p>
+			<p>IMPORTANT: Determinants can only be found for square matricies.</p>
+			<div class="responsive-equation">
+				<p> \[ det\begin{bmatrix}
+							a & b\\
+							c & d\\
+							\end{bmatrix} = 
+							(ad) - (bc)\]
+			</p>
+			</div>
 			
-			<p>Conside the following matrix</p>
+			<p>Pretty simple, right! Well let's add another dimension and work through how to find the determinant of a 3x3 matrix. There are a few more steps, but once you see how it's done you'll be on your way to becoming a determinant master! Below you can see how the determinant of a 3x3 is found.</P>
+			
 			<div class="responsive-equation">
 			<p> \[ det\begin{bmatrix}
                 a & b & c \\
@@ -129,59 +138,75 @@
 				d & e \\
 				g & h \\
 				\end{bmatrix}\]
-				</p></div>
+			</p></div>
 			
-            
+			<p>There are a few details that I have left out just for simplicity sake. If you'd like to learn more about the details check out the wiki page about <a href="https://en.wikipedia.org/wiki/Determinant" target="_blank">Determinants.</a> This method for finding the determinant works for any size of matrix. The only downside is the larger the matrix the more calculations are involved.</p>
+			
+			<h2>Cramer's Rule</h2>
+			<div class="horz_line"></div>
+			
+			<p>I breifly touched on the mathmatics behind Cramer's Rule at the being, but let's take a closer look at how it is accomplished. Consider the system below.</p>
+
+			<p> \[\begin{bmatrix}
+				a_1 & b_1 & c_1\\
+				a_2 & b_2 & c_2\\
+				a_3 & b_3 & c_3\\
+				\end{bmatrix}
+				\begin{bmatrix}
+					x\\
+					y\\
+					z\\
+				\end{bmatrix} =
+				\begin{bmatrix}
+					d_1\\
+					d_2\\
+					d_3\\
+				\end{bmatrix}\]
+			</p>
+
+			<p>The values of x,y, and z are as follows...</p>
+			
+			<div class="responsive-equation">
+			<p>
+				\[x = 
+					\frac{det\begin{bmatrix}
+					\color{red}d_1 & b_1 & c_1\\
+					\color{red}d_2 & b_2 & c_2\\
+					\color{red}d_3 & b_3 & c_3\\
+					\end{bmatrix}}{det\begin{bmatrix}
+					a_1 & b_1 & c_1\\
+					a_2 & b_2 & c_2\\
+					a_3 & b_3 & c_3\\
+					\end{bmatrix}},
+					\qquad
+					y = 
+					\frac{det\begin{bmatrix}
+					a_1 & \color{red}d_1 & c_1\\
+					a_2 & \color{red}d_2 & c_2\\
+					a_3 & \color{red}d_3 & c_3\\
+					\end{bmatrix}}{det\begin{bmatrix}
+					a_1 & b_1 & c_1\\
+					a_2 & b_2 & c_2\\
+					a_3 & b_3 & c_3\\
+					\end{bmatrix}},
+					\qquad
+					z = 
+					\frac{det\begin{bmatrix}
+					a_1 & b_1 & \color{red}d_1\\
+					a_2 & b_2 & \color{red}d_2\\
+					a_3 & b_3 & \color{red}d_3\\
+					\end{bmatrix}}{det\begin{bmatrix}
+					a_1 & b_1 & c_1\\
+					a_2 & b_2 & c_2\\
+					a_3 & b_3 & c_3\\
+					\end{bmatrix}}
+					\]
+			</p></div>
+
             <h2>Application</h2>
             <div class="horz_line"></div>
             
-            <p>Consider the linear system</p>
-            
-            <p> \begin{matrix}
-                a_1\,x \quad+& b_1\,y & = \quad c_1\\
-                a_2\,x \quad+& b_2\,y & = \quad c_2\\
-                \end{matrix}</p>
-            
-            <p>Which in matrix format is</p>
-            
-            <p> \[\begin{bmatrix}
-                a_1 & b_1 \\
-                a_2 & b_2 \\
-                \end{bmatrix}
-                \begin{bmatrix}
-                    x\\
-                    y\\
-                \end{bmatrix} =
-                \begin{bmatrix}
-                    c_1\\
-                    c_2\\
-                \end{bmatrix}\]
-            </p>
-            
-            <p>Assume $a_1b_2 - b_1a_2$ nonzero. Then with help of determinants, x and y can be found with Cramer's rule as:</p>
-            
-            
-            <div class="responsive-equation">
-            <p>
-                \[x = 
-                    \frac{det\begin{bmatrix}
-                    \color{red}c_1 & b_1\\
-                    \color{red}c_2 & b_2\\
-                    \end{bmatrix}}{det\begin{bmatrix}
-                    a_1 & b_1\\
-                    a_2 & b_2\\
-                    \end{bmatrix}} = \frac{\color{red}c_1\color{black}b_2-b_1\color{red}c_2}{a_1b_2 - b_1a_2},
-                    \qquad
-                    y = 
-                    \frac{det\begin{bmatrix}
-                    a_1 & \color{red}c_1\\
-                    a_2 & \color{red}c_2\\
-                    \end{bmatrix}}{det\begin{bmatrix}
-                    a_1 & b_1\\
-                    a_2 & b_2\\
-                    \end{bmatrix}} = \frac{a_1\color{red}c_2\color{black}-\color{red}c_1\color{black}a_2}{a_1b_2 - b_1a_2}.
-                    \]
-                </p></div>
+            <p>Now that we understand Cramer's Rule let's apply it! The first application will </p>
             
             
             <pre class="prettyprint"><code class="language-python">import numpy as np
@@ -245,7 +270,7 @@ def cramer_3x3(A3,b3):
 		
 		<!-- footer -->
 		<footer>
-			<p>Last Update: <!-- #BeginDate format:En2 -->22-Mar-2022<!-- #EndDate --></p>
+			<p>Last Update: <!-- #BeginDate format:En2 -->24-Mar-2022<!-- #EndDate --></p>
 			<p>&copy 2021 Jacob Watts. All Rights Reserved</p>
 		</footer>
 		
