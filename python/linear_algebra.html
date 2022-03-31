@@ -206,10 +206,13 @@
             <h2>Application</h2>
             <div class="horz_line"></div>
             
-            <p>Now that we understand Cramer's Rule let's apply it! The first application will </p>
+            <p>Now that we understand Cramer's Rule let's apply it! The first application will be the ubiquitous nodal analysis with three (3) unknowns and three (3) equations. We'll start off by doing the nodal analysis on the following circuit.</p>
+
+			<img src="../images/nodal_analysis.svg" alt="pano" width="100%" height="215px" vspace="10">
             
             
             <pre class="prettyprint"><code class="language-python">import numpy as np
+import numpy as np
 #cramer's rule for 2x2
 def det_2x2(A):
     #split up the 
@@ -219,7 +222,6 @@ def det_2x2(A):
     b_2 = A[1][1]
     #perform calculation
     detA = ((a_1)*(b_2)-(a_2)*(b_1))
-    
     return detA
 
 def det_3x3(B):
@@ -228,9 +230,8 @@ def det_3x3(B):
     B_1 = B[1:3:1, 0:3:2]
     B_2 = B[1:3:1, 0:2:1]
     #perform calculation
-    detB = B[0][0]*det_2x2(B_0) - 
-    B[0][1]*det_2x2(B_1) + B[0][2]*det_2x2(B_2)
-    
+    detB = B[0][0]*det_2x2(B_0) - \
+        B[0][1]*det_2x2(B_1) + B[0][2]*det_2x2(B_2)
     return detB
 
 def cramer_2x2(A,b):
@@ -243,7 +244,6 @@ def cramer_2x2(A,b):
     #solve using cramer's rule
     x = det_2x2(tempA)/det_2x2(A)
     y = det_2x2(tempB)/det_2x2(A)
-    
     return x,y
 
 def cramer_3x3(A3,b3):
@@ -261,8 +261,39 @@ def cramer_3x3(A3,b3):
     x = det_3x3(tempAx)/det_3x3(A3)
     y = det_3x3(tempAy)/det_3x3(A3)
     z = det_3x3(tempAz)/det_3x3(A3)
-
     return x,y,z
+
+def main():
+    #enter array for 2x2
+    A = np.array([[1.,2.],
+                  [3.,4.]])
+    b = np.array ([[5.], [6.]])
+    #enter array for 3x3
+    C = np.array ([[4. , -1. , 0.],
+                   [-2. , 7. , -4.],
+                   [0. , -3. , 4.]])
+    d = np.array ([[6.], [0.], [0.]])
+    #find the determinant of A
+    detA = det_2x2(A)
+    x_A,y_A = cramer_2x2(A,b)
+    #find the determinant of C
+    detC = det_3x3(C)
+    x_C, y_C, z_C = cramer_3x3(C, d)
+    
+    #print statements
+    print('--------Matrix 2x2--------')
+    print('numpy det A:       %.4f' %np.linalg.det(A))
+    print('det_2x2 function:  %.4f' %detA)
+    print('x = %.3f \t \t y = %.3f\n' %(x_A,y_A))
+    
+    print('--------Matrix 3x3---------')
+    print('numpy det C:       %.4f' %np.linalg.det(C))
+    print('det_3x3 function:  %.4f' %detC)
+    print('x=%.4f  y=%.4f  z=%.6f' \
+          %(x_C,y_C,z_C))
+    
+if __name__ == "__main__":
+    main()
             
             </code></pre>
 			
@@ -270,7 +301,7 @@ def cramer_3x3(A3,b3):
 		
 		<!-- footer -->
 		<footer>
-			<p>Last Update: <!-- #BeginDate format:En2 -->24-Mar-2022<!-- #EndDate --></p>
+			<p>Last Update: <!-- #BeginDate format:En2 -->30-Mar-2022<!-- #EndDate --></p>
 			<p>&copy 2021 Jacob Watts. All Rights Reserved</p>
 		</footer>
 		
