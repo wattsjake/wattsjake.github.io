@@ -375,8 +375,11 @@ footer p{
 		letter-spacing: inherit;
 		text-decoration: underline;
 	}
-    .responsive-equation p{
+    .responsive-equation-10px p{
         font-size: 10px;
+    }
+	.responsive-equation-7px p{
+        font-size: 7px;
     }
 	/* Page navigation bar */
 	.page_nav{
